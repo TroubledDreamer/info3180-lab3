@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+<form method="POST" action="{{ url_for('contact')}}">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }}
+    {{ form.name(size=20) }}
+    {{ form.email.label }}
+    {{ form.email(size=20) }}
+    {{ form.subject.label }}
+    {{ form.subject(size=20) }}
+    {{ form.text.label }}
+    {{ form.text(size=20) }}
+    <button type="submit">Go</button>
+
+</form>
+
+{% endblock %}
